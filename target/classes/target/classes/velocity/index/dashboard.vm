@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap material admin template">
+    <meta name="author" content="">
+
+    <title>Dashboard | Remark Material Admin Template</title>
+
+    #parse( "/velocity/resources.vm" )
+    
+    <script>
+      Breakpoints();
+    </script>
+  </head>
+  <body class="animsition dashboard">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided"
+          data-toggle="menubar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="hamburger-bar"></span>
+        </button>
+        <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-collapse"
+          data-toggle="collapse">
+          <i class="icon md-more" aria-hidden="true"></i>
+        </button>
+        <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+          <img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
+          <span class="navbar-brand-text hidden-xs-down"> Leopard</span>
+        </div>
+        <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
+          data-toggle="collapse">
+          <span class="sr-only">Toggle Search</span>
+          <i class="icon md-search" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="navbar-container container-fluid">
+        <!-- Navbar Collapse -->
+        <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+          <!-- Navbar Toolbar -->
+          <ul class="nav navbar-toolbar">
+            <li class="nav-item hidden-float" id="toggleMenubar">
+              <a class="nav-link" data-toggle="menubar" href="#" role="button">
+                <i class="icon hamburger hamburger-arrow-left">
+                  <span class="sr-only">Toggle menubar</span>
+                  <span class="hamburger-bar"></span>
+                </i>
+              </a>
+            </li>
+            <li class="nav-item hidden-sm-down" id="toggleFullscreen">
+              <a class="nav-link icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+                <span class="sr-only">Toggle fullscreen</span>
+              </a>
+            </li>
+            <li class="nav-item hidden-float">
+              <a class="nav-link icon md-search" data-toggle="collapse" href="#" data-target="#site-navbar-search"
+                role="button">
+                <span class="sr-only">Toggle Search</span>
+              </a>
+            </li>
+
+          </ul>
+          <!-- End Navbar Toolbar -->
+
+          <!-- Navbar Toolbar Right -->
+          <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up"
+                aria-expanded="false" role="button">
+                <span class="flag-icon flag-icon-us"></span>
+              </a>
+              <div class="dropdown-menu" role="menu">
+                <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-gb"></span> English</a>
+                <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-fr"></span> French</a>
+                <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-dk"></span> Danish</a>
+                <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-no"></span> Norwegian</a>
+                <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-nl"></span> Dutch</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
+                data-animation="scale-up" role="button">
+                <span class="avatar avatar-online">
+                  <img src="../../global/portraits/5.jpg" alt="...">
+                  <i></i>
+                </span>
+              </a>
+              <div class="dropdown-menu" role="menu">
+                <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon md-account" aria-hidden="true"></i> Profile</a>
+                <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon md-settings" aria-hidden="true"></i> Settings</a>
+                <div class="dropdown-divider" role="presentation"></div>
+                <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon md-power" aria-hidden="true"></i> Logout</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" title="Notifications"
+                aria-expanded="false" data-animation="scale-up" role="button">
+                <i class="icon md-notifications" aria-hidden="true"></i>
+                <span class="badge badge-pill badge-danger up">5</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+                <div class="dropdown-menu-header">
+                  <h5>NOTIFICATIONS</h5>
+                  <span class="badge badge-round badge-danger">New 5</span>
+                </div>
+
+                <div class="list-group">
+                  <div data-role="container">
+                    <div data-role="content">
+                      <a class="list-group-item dropdown-item" href="javascript:void(0)" role="menuitem">
+                        <div class="media">
+                          <div class="pr-10">
+                            <i class="icon md-receipt bg-red-600 white icon-circle" aria-hidden="true"></i>
+                          </div>
+                          <div class="media-body">
+                            <h6 class="media-heading">A new order has been placed</h6>
+                            <time class="media-meta" datetime="2017-06-12T20:50:48+08:00">5 hours ago</time>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="list-group-item dropdown-item" href="javascript:void(0)" role="menuitem">
+                        <div class="media">
+                          <div class="pr-10">
+                            <i class="icon md-account bg-green-600 white icon-circle" aria-hidden="true"></i>
+                          </div>
+                          <div class="media-body">
+                            <h6 class="media-heading">Completed the task</h6>
+                            <time class="media-meta" datetime="2017-06-11T18:29:20+08:00">2 days ago</time>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="list-group-item dropdown-item" href="javascript:void(0)" role="menuitem">
+                        <div class="media">
+                          <div class="pr-10">
+                            <i class="icon md-settings bg-red-600 white icon-circle" aria-hidden="true"></i>
+                          </div>
+                          <div class="media-body">
+                            <h6 class="media-heading">Settings updated</h6>
+                            <time class="media-meta" datetime="2017-06-11T14:05:00+08:00">2 days ago</time>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="list-group-item dropdown-item" href="javascript:void(0)" role="menuitem">
+                        <div class="media">
+                          <div class="pr-10">
+                            <i class="icon md-calendar bg-blue-600 white icon-circle" aria-hidden="true"></i>
+                          </div>
+                          <div class="media-body">
+                            <h6 class="media-heading">Event started</h6>
+                            <time class="media-meta" datetime="2017-06-10T13:50:18+08:00">3 days ago</time>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="list-group-item dropdown-item" href="javascript:void(0)" role="menuitem">
+                        <div class="media">
+                          <div class="pr-10">
+                            <i class="icon md-comment bg-orange-600 white icon-circle" aria-hidden="true"></i>
+                          </div>
+                          <div class="media-body">
+                            <h6 class="media-heading">Message received</h6>
+                            <time class="media-meta" datetime="2017-06-10T12:34:48+08:00">3 days ago</time>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-menu-footer">
+                  <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                    <i class="icon md-settings" aria-hidden="true"></i>
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                    All notifications
+                  </a>
+                </div>
+              </div>
+            </li>
+
+
+          </ul>
+          <!-- End Navbar Toolbar Right -->
+        </div>
+        <!-- End Navbar Collapse -->
+
+        <!-- Site Navbar Seach -->
+        <div class="collapse navbar-search-overlap" id="site-navbar-search">
+          <form role="search">
+            <div class="form-group">
+              <div class="input-search">
+                <i class="input-search-icon md-search" aria-hidden="true"></i>
+                <input type="text" class="form-control" name="site-search" placeholder="Search...">
+                <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search"
+                  data-toggle="collapse" aria-label="Close"></button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- End Site Navbar Seach -->
+      </div>
+    </nav>    <div class="site-menubar">
+      <div class="site-menubar-body">
+        <div>
+          <div>
+            <ul class="site-menu" data-plugin="menu">
+              <li class="site-menu-category">Leopard API Repository</li>
+              <li class="site-menu-item active">
+                <a class="animsition-link" href="index.html">
+                        <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                        <span class="site-menu-title">Dashboard</span>
+                    </a>
+              </li>
+
+              <li class="site-menu-category">Administration</li>
+              <li class="site-menu-item has-sub">
+                <a href="javascript:void(0)">
+                        <i class="site-menu-icon md-apps" aria-hidden="true"></i>
+                        <span class="site-menu-title">Projects</span>
+                                <span class="site-menu-arrow"></span>
+                    </a>
+                <ul class="site-menu-sub">
+
+                  <li class="site-menu-item">
+                    <a class="animsition-link" href="uikit/buttons.html">
+                      <span class="site-menu-title">Buttons</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="site-menu-item has-sub">
+                <a href="javascript:void(0)">
+                        <i class="site-menu-icon md-apps" aria-hidden="true"></i>
+                        <span class="site-menu-title">Services</span>
+                                <span class="site-menu-arrow"></span>
+                    </a>
+                <ul class="site-menu-sub">
+
+                  <li class="site-menu-item">
+                    <a class="animsition-link" href="uikit/buttons.html">
+                      <span class="site-menu-title">Buttons</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="site-menu-item has-sub">
+                <a href="javascript:void(0)">
+                        <i class="site-menu-icon md-collection-item" aria-hidden="true"></i>
+                        <span class="site-menu-title">Transports</span>
+                                <span class="site-menu-arrow"></span>
+                    </a>
+                <ul class="site-menu-sub">
+
+                  <li class="site-menu-item">
+                    <a class="animsition-link" href="uikit/buttons.html">
+                      <span class="site-menu-title">Buttons</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="site-menu-item">
+                <a href="javascript:void(0)">
+                        <i class="site-menu-icon md-notifications-active" aria-hidden="true"></i>
+                        <span class="site-menu-title">Notifications</span>
+                                <span class="site-menu-arrow"></span>
+                    </a>
+              </li>
+            </ul>
+            <div class="site-menubar-section">
+              <h5>
+                Milestone
+                <span class="float-right">30%</span>
+              </h5>
+              <div class="progress progress-xs">
+                <div class="progress-bar active" style="width: 30%;" role="progressbar"></div>
+              </div>
+              <h5>
+                Release
+                <span class="float-right">60%</span>
+              </h5>
+              <div class="progress progress-xs">
+                <div class="progress-bar progress-bar-warning" style="width: 60%;" role="progressbar"></div>
+              </div>
+            </div>      </div>
+        </div>
+      </div>
+
+      <div class="site-menubar-footer">
+        <a href="javascript: void(0);" class="fold-show" data-placement="top" data-toggle="tooltip"
+          data-original-title="Settings">
+          <span class="icon md-settings" aria-hidden="true"></span>
+        </a>
+        <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Lock">
+          <span class="icon md-eye-off" aria-hidden="true"></span>
+        </a>
+        <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Logout">
+          <span class="icon md-power" aria-hidden="true"></span>
+        </a>
+      </div></div>
+      <div class="site-gridmenu">
+      <div>
+        <div>
+          <ul>
+            <li>
+              <a href="apps/mailbox/mailbox.html">
+                <i class="icon md-email"></i>
+                <span>Mailbox</span>
+              </a>
+            </li>
+            <li>
+              <a href="apps/calendar/calendar.html">
+                <i class="icon md-calendar"></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="apps/contacts/contacts.html">
+                <i class="icon md-account"></i>
+                <span>Contacts</span>
+              </a>
+            </li>
+            <li>
+              <a href="apps/media/overview.html">
+                <i class="icon md-videocam"></i>
+                <span>Media</span>
+              </a>
+            </li>
+            <li>
+              <a href="apps/documents/categories.html">
+                <i class="icon md-receipt"></i>
+                <span>Documents</span>
+              </a>
+            </li>
+            <li>
+              <a href="apps/projects/projects.html">
+                <i class="icon md-image"></i>
+                <span>Project</span>
+              </a>
+            </li>
+            <li>
+              <a href="apps/forum/forum.html">
+                <i class="icon md-comments"></i>
+                <span>Forum</span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html">
+                <i class="icon md-view-dashboard"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page -->
+    <div class="page">
+      <div class="page-content container-fluid">
+        <div class="row" data-plugin="matchHeight" data-by-row="true">
+          <div class="col-xl-3 col-md-6">
+            <!-- Widget Linearea One-->
+            <div class="card card-shadow" id="widgetLineareaOne">
+              <div class="card-block p-20 pt-10">
+                <div class="clearfix">
+                  <div class="grey-800 float-left py-10">
+                    <i class="icon md-account grey-600 font-size-24 vertical-align-bottom mr-5"></i>                    User
+                  </div>
+                  <span class="float-right grey-700 font-size-30">1,253</span>
+                </div>
+                <div class="mb-20 grey-500">
+                  <i class="icon md-long-arrow-up green-500 font-size-16"></i>                  15% From this yesterday
+                </div>
+                <div class="ct-chart h-50"></div>
+              </div>
+            </div>
+            <!-- End Widget Linearea One -->
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <!-- Widget Linearea Two -->
+            <div class="card card-shadow" id="widgetLineareaTwo">
+              <div class="card-block p-20 pt-10">
+                <div class="clearfix">
+                  <div class="grey-800 float-left py-10">
+                    <i class="icon md-flash grey-600 font-size-24 vertical-align-bottom mr-5"></i>                    VISITS
+                  </div>
+                  <span class="float-right grey-700 font-size-30">2,425</span>
+                </div>
+                <div class="mb-20 grey-500">
+                  <i class="icon md-long-arrow-up green-500 font-size-16"></i>                  34.2% From this week
+                </div>
+                <div class="ct-chart h-50"></div>
+              </div>
+            </div>
+            <!-- End Widget Linearea Two -->
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <!-- Widget Linearea Three -->
+            <div class="card card-shadow" id="widgetLineareaThree">
+              <div class="card-block p-20 pt-10">
+                <div class="clearfix">
+                  <div class="grey-800 float-left py-10">
+                    <i class="icon md-chart grey-600 font-size-24 vertical-align-bottom mr-5"></i>                    Total Clicks
+                  </div>
+                  <span class="float-right grey-700 font-size-30">1,864</span>
+                </div>
+                <div class="mb-20 grey-500">
+                  <i class="icon md-long-arrow-down red-500 font-size-16"></i>                  15% From this yesterday
+                </div>
+                <div class="ct-chart h-50"></div>
+              </div>
+            </div>
+            <!-- End Widget Linearea Three -->
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <!-- Widget Linearea Four -->
+            <div class="card card-shadow" id="widgetLineareaFour">
+              <div class="card-block p-20 pt-10">
+                <div class="clearfix">
+                  <div class="grey-800 float-left py-10">
+                    <i class="icon md-view-list grey-600 font-size-24 vertical-align-bottom mr-5"></i>                    Items
+                  </div>
+                  <span class="float-right grey-700 font-size-30">845</span>
+                </div>
+                <div class="mb-20 grey-500">
+                  <i class="icon md-long-arrow-up green-500 font-size-16"></i>                  18.4% From this yesterday
+                </div>
+                <div class="ct-chart h-50"></div>
+              </div>
+            </div>
+            <!-- End Widget Linearea Four -->
+          </div>
+          <div class="col-xxl-7 col-lg-9">
+            <!-- Panel Projects Status -->
+            <div class="panel" id="projects-status">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  Projects Status
+                  <span class="badge badge-pill badge-info">5</span>
+                </h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <td>Code</td>
+                      <td>Project</td>
+                      <td>Status</td>
+                      <td class="text-left">Progress</td>
+                      <td class="text-left">Action</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  #if($projects)
+                  #foreach( $project in $projects )
+                    <tr>
+                      <td><a href="/project/$project.ProjectCode">Project</a></td>
+                      <td>$project.ProjectName</td>
+                      <td>
+                        <span class="badge badge-warning">Pre-Production</span>
+                      </td>
+                      <td>
+                          <span data-plugin="peityPie" data-skin="orange">5/10</span>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                          data-toggle="tooltip" data-original-title="Edit">
+                          <i class="icon md-wrench" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                          data-toggle="tooltip" data-original-title="Delete">
+                          <i class="icon md-close" aria-hidden="true"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    #end
+                    #end
+                    <tr>
+                      <td><a href="">DDEN</a></td>
+                      <td>DenyDent for Azka</td>
+                      <td>
+                        <span class="badge badge-success">LIVE</span>
+                      </td>
+                      <td>
+                          <span data-plugin="peityPie" data-skin="orange">5/10</span>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                          data-toggle="tooltip" data-original-title="Edit">
+                          <i class="icon md-wrench" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                          data-toggle="tooltip" data-original-title="Delete">
+                          <i class="icon md-close" aria-hidden="true"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="">DDEN</a></td>
+                      <td>DenyDent for Azka</td>
+                      <td>
+                        <span class="badge badge-primary">Developing</span>
+                      </td>
+                      <td>
+                          <span data-plugin="peityPie" data-skin="orange">5/10</span>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                          data-toggle="tooltip" data-original-title="Edit">
+                          <i class="icon md-wrench" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                          data-toggle="tooltip" data-original-title="Delete">
+                          <i class="icon md-close" aria-hidden="true"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- End Panel Projects Stats -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Page -->
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer-legal">© 2017 <a href="">Leopard </a>API Manager Application Version: 0.0.1(Leopard)</div>
+      <div class="site-footer-right">
+        Crafted by <a href="">Exigent Platform Services</a>
+      </div>
+    </footer>
+    #parse( "/velocity/lazyresources.vm" )
+    	<script src="/global/vendor/chartist/chartist.min.js"></script>
+        <script src="/global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.js"></script>
+        <script src="/global/vendor/jvectormap/jquery-jvectormap.min.js"></script>
+        <script src="/global/vendor/jvectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="/global/vendor/matchheight/jquery.matchHeight-min.js"></script>
+        <script src="/global/vendor/peity/jquery.peity.min.js"></script>
+        <script src="/global/js/Plugin/matchheight.js"></script>
+        <script src="/global/js/Plugin/jvectormap.js"></script>
+        <script src="/global/js/Plugin/peity.js"></script>
+        <script src="/assets/examples/js/dashboard/v1.js"></script>
+  </body>
+</html>

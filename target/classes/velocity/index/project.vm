@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Project Page</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>Project Page</h1>
+<a href="$WebPath.getLOGIN()">Logged in as: $currentUser</a>
+<a href="/dashboard/">Dashboard</a>
+	<div>
+	<ul>
+		<li>Owner: $project.ProjectOwner, <a href="mailto:$project.ProjectContactEmail">$project.ProjectContactEmail</a>, phone:$project.ProjectContactPhone</li>
+		<li>Name: $project.ProjectName</li>
+		<li>Description: $project.ProjectDescription</li>
+		<li>Code: $project.ProjectCode</li>
+	</ul>
+	
+	</div>
+</body>
+</html>
+

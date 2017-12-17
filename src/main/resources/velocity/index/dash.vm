@@ -1,0 +1,24 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+    <h1>$clientip</h1>
+    <h1>$basedata</h1>
+    <h2>$msg.get("INDEX_REGISTERED_USERS", $users.size())</h2>
+    <ul>
+        #foreach($user in $users)
+            <li>$user</li>
+        #end
+    </ul>
+    <p>$msg.get("INDEX_PASSWORD_INFO")</p>
+    #if($projects)
+    <ul>
+	#foreach( $project in $projects )
+	<div class="row row-2">
+		<a href="/project/$project.ProjectCode">Project</a>
+	    <li>$project.ProjectName</li>
+	</div> 
+	#end
+	</ul>
+    
+        
+    #end
+#end

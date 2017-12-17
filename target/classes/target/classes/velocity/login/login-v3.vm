@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap material admin template">
+    <meta name="author" content="">
+
+    <title>Leopard Login</title>
+	#parse( "/velocity/resources.vm" )
+    <script>
+      Breakpoints();
+    </script>
+  </head>
+  <body class="animsition page-login-v3 layout-full">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <!-- Page -->
+    <div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">>
+      <div class="page-content vertical-align-middle">
+        <div class="panel">
+          <div class="panel-body">
+            <div class="brand">
+              <img class="brand-img" src="../../assets//images/logo-blue.png" alt="...">
+              <h2 class="brand-text font-size-18">Leopard</h2>
+            </div>
+            #if($authenticationFailed)
+        		<p class="bad notification">Check username and password.</p>
+    		#elseif($authenticationSucceeded)
+        		<p class="good notification">$msg.get("LOGIN_AUTH_SUCCEEDED", $currentUser)</p>
+    		#elseif($loggedOut)
+        		<p class="notification">$msg.get("LOGIN_LOGGED_OUT")</p>
+    		#end
+            
+            <form method="post" id="loginForm" action="#" autocomplete="off">
+              <div class="form-group form-material floating" data-plugin="formMaterial">
+                <input type="text" class="form-control" name="username" placeholder="$msg.get("LOGIN_LABEL_USERNAME")" />
+                <label class="floating-label">$msg.get("LOGIN_LABEL_USERNAME")</label>
+              </div>
+              <div class="form-group form-material floating" data-plugin="formMaterial">
+                <input type="password" class="form-control" name="password" placeholder="$msg.get("LOGIN_LABEL_PASSWORD")" />
+                <label class="floating-label">$msg.get("LOGIN_LABEL_PASSWORD")</label>
+              </div>
+              <div class="form-group clearfix">
+                <div class="checkbox-custom checkbox-inline checkbox-primary checkbox-lg float-left">
+                  <input type="checkbox" id="inputCheckbox" name="remember">
+                  <label for="inputCheckbox">Remember me</label>
+                </div>
+                <a class="float-right" href="forgot-password.html">Forgot password?</a>
+              </div>
+              <button type="submit" value="$msg.get("LOGIN_BUTTON_LOGIN")" class="btn btn-primary btn-block btn-lg mt-40">Sign in</button>
+            </form>
+            
+            
+            <p>Still no account? Please go to <a href="register-v3.html">Our Support Page</a></p>
+          </div>
+        </div>
+
+        <footer class="page-copyright page-copyright-inverse">
+          <p>Version 0.0.1 (Leopard build)</p>
+          <p>© 2018. All RIGHT RESERVED.</p>
+        </footer>
+      </div>
+    </div>
+    <!-- End Page -->
+
+#parse( "/velocity/lazyresources.vm" )
+   <script>
+      (function(document, window, $){
+        'use strict';
+
+        var Site = window.Site;
+        $(document).ready(function(){
+          Site.run();
+        });
+      })(document, window, jQuery);
+    </script>
+
+  </body>
+</html>

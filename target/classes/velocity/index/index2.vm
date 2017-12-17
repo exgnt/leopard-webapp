@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>someshit</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>Index Blooody Page Init</h1>
+<a href="$WebPath.getLOGIN()">Log In</a>
+</body>
+</html>
+
