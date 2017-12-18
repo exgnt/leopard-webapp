@@ -1,5 +1,22 @@
 Manifest-Version: 1.0
 Built-By: ex1
+Class-Path: dependency-jars/spark-core-2.5.jar dependency-jars/slf4j-a
+ pi-1.7.13.jar dependency-jars/jetty-server-9.3.6.v20151106.jar depend
+ ency-jars/javax.servlet-api-3.1.0.jar dependency-jars/jetty-http-9.3.
+ 6.v20151106.jar dependency-jars/jetty-util-9.3.6.v20151106.jar depend
+ ency-jars/jetty-io-9.3.6.v20151106.jar dependency-jars/jetty-webapp-9
+ .3.6.v20151106.jar dependency-jars/jetty-xml-9.3.6.v20151106.jar depe
+ ndency-jars/jetty-servlet-9.3.6.v20151106.jar dependency-jars/jetty-s
+ ecurity-9.3.6.v20151106.jar dependency-jars/websocket-server-9.3.6.v2
+ 0151106.jar dependency-jars/websocket-common-9.3.6.v20151106.jar depe
+ ndency-jars/websocket-client-9.3.6.v20151106.jar dependency-jars/webs
+ ocket-servlet-9.3.6.v20151106.jar dependency-jars/websocket-api-9.3.6
+ .v20151106.jar dependency-jars/slf4j-simple-1.7.21.jar dependency-jar
+ s/spark-debug-tools-0.5.jar dependency-jars/spark-template-velocity-2
+ .5.5.jar dependency-jars/velocity-1.7.jar dependency-jars/commons-col
+ lections-3.2.1.jar dependency-jars/commons-lang-2.4.jar dependency-ja
+ rs/mongo-java-driver-2.11.3.jar dependency-jars/gson-2.2.4.jar
 Build-Jdk: 1.8.0_51
 Created-By: Maven Integration for Eclipse
+Main-Class: com.exigent.leopard.webapp.Main
 
